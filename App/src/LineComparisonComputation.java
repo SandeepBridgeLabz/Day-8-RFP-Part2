@@ -7,12 +7,18 @@ public class LineComparisonComputation {
                         Math.pow((8 - 4), 2));
 
         Double line2Length = Math.sqrt(
-                Math.pow((10 - 6), 2) +
-                        Math.pow((12 - 8), 2));
+                Math.pow((15 - 10), 2) +
+                        Math.pow((18 - 12), 2));
 
-        if (line1Length.equals(line2Length))
-            System.out.println("Both lines are Equal");
+        int result = line1Length.compareTo(line2Length);
+
+        if (result == 0)
+            System.out.println("Both Lines are Equal");
+
+        else if (result > 0)
+            System.out.println("Line 1 is Greater than Line 2");
+
         else
-            System.out.println("Both lines are Not Equal");
+            System.out.println("Line 1 is Less than Line 2");
     }
 }
