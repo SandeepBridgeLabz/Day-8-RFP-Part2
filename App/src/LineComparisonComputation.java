@@ -2,13 +2,17 @@ public class LineComparisonComputation {
 
     public static void main(String[] args) {
 
-        int x1 = 2, y1 = 4;
-        int x2 = 6, y2 = 8;
+        Double line1Length = Math.sqrt(
+                Math.pow((6 - 2), 2) +
+                        Math.pow((8 - 4), 2));
 
-        double length = Math.sqrt(
-                Math.pow((x2 - x1), 2) +
-                        Math.pow((y2 - y1), 2));
+        Double line2Length = Math.sqrt(
+                Math.pow((10 - 6), 2) +
+                        Math.pow((12 - 8), 2));
 
-        System.out.println("Length of Line = " + length);
+        if (line1Length.equals(line2Length))
+            System.out.println("Both lines are Equal");
+        else
+            System.out.println("Both lines are Not Equal");
     }
 }
